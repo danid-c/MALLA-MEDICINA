@@ -1,0 +1,85 @@
+[
+  { "id": "MAT01", "name": "Matemática en Ciencias de la Salud", "prereq": [] },
+  { "id": "COM01", "name": "Comunicación en Ciencias de la Salud", "prereq": [] },
+  { "id": "INT01", "name": "Interculturalidad", "prereq": [] },
+  { "id": "MET01", "name": "Metodología del Aprendizaje", "prereq": [] },
+  { "id": "MED01", "name": "Aprendiendo a Ser Médico", "prereq": [] },
+  { "id": "BMC01", "name": "Bases Moleculares y Celulares I", "prereq": [] },
+
+  { "id": "BMC02", "name": "Bases Moleculares y Celulares II", "prereq": ["BMC01"] },
+  { "id": "DER02", "name": "Derecho en Salud", "prereq": [] },
+  { "id": "ART02", "name": "El Arte en las Ciencias", "prereq": [] },
+  { "id": "REA02", "name": "Realidad Nacional", "prereq": [] },
+  { "id": "LOG02", "name": "Lógica y Filosofía", "prereq": [] },
+  { "id": "EFCH01", "name": "Estructura y Función I", "prereq": ["BMC01"] },
+
+  { "id": "BMC03", "name": "Bases Moleculares y Celulares III", "prereq": ["EFCH01"] },
+  { "id": "NTIC03", "name": "NTICs", "prereq": ["MAT01", "MED01"] },
+  { "id": "CCD03", "name": "Ciencias de la Conducta", "prereq": ["EFCH01"] },
+  { "id": "HIS03", "name": "Historia de la Medicina", "prereq": ["INT01"] },
+  { "id": "EST03", "name": "Métodos Estadísticos", "prereq": ["MAT01", "MET01"] },
+  { "id": "EFCH02", "name": "Estructura y Función II", "prereq": ["EFCH01"] },
+
+  { "id": "MIC04", "name": "Microbiología Médica", "prereq": ["BMC02"] },
+  { "id": "INM04", "name": "Inmunología", "prereq": ["BMC02"] },
+  { "id": "PAR04", "name": "Parasitología", "prereq": ["EFCH02"] },
+  { "id": "SCM04", "name": "Salud Comunitaria", "prereq": ["INT01", "DER02", "REA02"] },
+  { "id": "EFCH03", "name": "Estructura y Función III", "prereq": ["EFCH02"] },
+
+  { "id": "TER05", "name": "Terapéutica y Cuidados Paliativos", "prereq": ["EFCH03", "MIC04"] },
+  { "id": "PAT05", "name": "Patología General", "prereq": ["EFCH03"] },
+  { "id": "FIS05", "name": "Integradora I - Fisiopatología", "prereq": ["BMC01", "BMC02", "BMC03", "EFCH01", "EFCH02", "EFCH03"] },
+  { "id": "EPI05", "name": "Epidemiología", "prereq": ["SCM04"] },
+  { "id": "ING05", "name": "Inglés en Salud", "prereq": [] },
+
+  { "id": "CLI06", "name": "Introducción a la Clínica", "prereq": ["FIS05"] },
+  { "id": "SIM06", "name": "Simulación I", "prereq": ["FIS05"] },
+  { "id": "PTC06", "name": "Patología Clínica", "prereq": ["FIS05"] },
+  { "id": "IMG06", "name": "Diagnóstico por Imágenes", "prereq": ["FIS05"] },
+  { "id": "INV06", "name": "Metodología de la Investigación I", "prereq": ["FIS05"] },
+  { "id": "ELE06", "name": "Electivo 1", "prereq": [] },
+
+  { "id": "CLIM07", "name": "Clínica y Terapéutica en Medicina I", "prereq": ["CLI06"] },
+  { "id": "SIM07", "name": "Simulación II", "prereq": ["SIM06"] },
+  { "id": "GEN07", "name": "Genética Médica", "prereq": ["BMC02", "MIC04"] },
+  { "id": "QUE07", "name": "Quechua en Salud", "prereq": [] },
+  { "id": "INV07", "name": "Metodología de la Investigación II", "prereq": ["INV06"] },
+  { "id": "ELE07", "name": "Electivo 2", "prereq": [] },
+
+  { "id": "CLIM08", "name": "Clínica y Terapéutica en Medicina II", "prereq": ["CLIM07"] },
+  { "id": "SIM08", "name": "Simulación III", "prereq": ["SIM07"] },
+  { "id": "BIO08", "name": "Bioética", "prereq": ["INV07"] },
+  { "id": "RED08", "name": "Redacción y Publicación I", "prereq": ["INV07"] },
+  { "id": "ELE08", "name": "Electivo 3", "prereq": [] },
+
+  { "id": "SM09", "name": "Salud Mental", "prereq": ["CLIM08"] },
+  { "id": "CIR09", "name": "Clínica y Terapéutica en Cirugía I", "prereq": ["CLIM08"] },
+  { "id": "MED09", "name": "Medicina Legal", "prereq": ["CLIM08"] },
+  { "id": "RED09", "name": "Redacción y Publicación II", "prereq": ["RED08"] },
+  { "id": "ELE09", "name": "Electivo 4", "prereq": [] },
+
+  { "id": "ETI10", "name": "Ética y Deontología", "prereq": ["BIO08"] },
+  { "id": "ONC10", "name": "Paciente Oncológico", "prereq": ["SM09"] },
+  { "id": "CIR10", "name": "Clínica y Terapéutica en Cirugía II", "prereq": ["CIR09"] },
+  { "id": "GES10", "name": "Gestión Estratégica y Emprendimiento en Salud", "prereq": ["EPI05", "BIO08", "MED09"] },
+
+  { "id": "SEX11", "name": "Sexualidad Humana", "prereq": ["EFCH03", "BIO08"] },
+  { "id": "GINE11", "name": "Clínica y Terapéutica en Gineco-Obstetricia", "prereq": ["CIR10"] },
+  { "id": "SEM11", "name": "Seminario de Ciencias Básicas Aplicadas I", "prereq": ["CIR10"] },
+  { "id": "MEDINT11", "name": "Medicina Intercultural", "prereq": ["GES10"] },
+  { "id": "TESI11", "name": "Tesis I", "prereq": ["INV07", "ETI10"] },
+
+  { "id": "PED12", "name": "Clínica y Terapéutica en Pediatría", "prereq": ["GINE11"] },
+  { "id": "EXT12", "name": "Externado en Primer Nivel de Atención", "prereq": ["GINE11"] },
+  { "id": "SEM12", "name": "Seminario de Ciencias Básicas Aplicadas II", "prereq": ["SEM11"] },
+  { "id": "INT12", "name": "Integradora II - Atención Integral", "prereq": ["GINE11"] },
+  { "id": "TESI12", "name": "Tesis II", "prereq": ["TESI11"] },
+
+  { "id": "INT13A", "name": "Internado Rotación I", "prereq": ["EXT12"] },
+  { "id": "INT13B", "name": "Internado Rotación II", "prereq": ["INT13A"] },
+  { "id": "SEM13", "name": "Seminario Integrador I", "prereq": ["TESI12"] },
+
+  { "id": "INT14A", "name": "Internado Rotación III", "prereq": ["INT13B"] },
+  { "id": "INT14B", "name": "Internado Rotación IV", "prereq": ["INT14A"] },
+  { "id": "SEM14", "name": "Seminario Integrador II", "prereq": ["SEM13"] }
+]
